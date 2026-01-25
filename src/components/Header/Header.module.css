@@ -1,0 +1,157 @@
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.hamburgerButton {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    gap: 5px;
+}
+
+.hamburgerButton span {
+    width: 25px;
+    height: 2px;
+    background-color: #344553;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+    display: block;
+}
+
+.hamburgerButton.hamburgerOpen .hamburgerLine:nth-child(1) {
+    transform: translateY(3.5px) rotate(45deg);
+}
+
+.hamburgerButton.hamburgerOpen .hamburgerLine:nth-child(2) {
+    transform: translateY(-3.5px) rotate(-45deg);
+}
+
+.hamburgerNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F9FAFB;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.hamburgerNav.navOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.navLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navLinks li {
+    text-align: center;
+}
+
+.navLinks a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+.navLinks a:hover {
+    opacity: 0.6;
+}
+
+.jaText {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #344553;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+}
+
+.enText {
+    font-family: sans-serif;
+    color: #6AB7DE;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .hamburgerButton {
+        display: none;
+    }
+
+    .hamburgerNav {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        margin-left: auto;
+        padding-top: 20px;
+        padding-right: 40px;
+    }
+
+    .navLinks {
+        flex-direction: row;
+        gap: 40px;
+        justify-content: flex-end;
+    }
+
+    .navLinks a{
+        position: relative;
+    }
+
+    .navLinks a::after {
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #6AB7DE;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform 0.3s ease-out;
+    }
+
+    .navLinks a:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .jaText {
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+
+    .enText {
+        display: none;
+    }
+}
