@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import styles from './Form.module.css'
 import { init, send } from '@emailjs/browser'
+import useUrlSanitizer from '../hooks/useUrlSanitizer'
 
 const Form = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -9,25 +10,29 @@ const Form = () => {
     setIsFormOpen(!isFormOpen);
   };
 
+  const { sanitizeText } = useUrlSanitizer();
+
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = async(data) => {
 
     const userID = import.meta.env.VITE_EMAIL_API_KEY
-    const serviceID = import.meta.env.REACT_APP_EMAIL_SERVICE_ID
-    const templateID = import.meta.env.REACT_APP_EMAIL_TEMPLATE_ID
+    const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID
+    const templateID = import.meta.env.VITE_EMAIL_TEMPLATE_ID
 
     if (userID && serviceID && templateID) {
       init(userID)
 
+      const sanitizedText = sanitizeText(data.content)
+
       const params = {
         name: data.name,
         email: data.email,
-        content: data.content
+        content: sanitizedText
       }
 
       try {
-        await send(serviceID, templateID, params, userID)
-        alert('この度はお問い合わせ頂き、ありがとうございます。\nお問い合わせを受け付けました。。')
+        await send(serviceID, templateID, params)
+        alert('この度はお問い合わせいただき、ありがとうございます。\nお問い合わせを受け付けました。')
         reset()
       } catch (error) {
         console.error(error)
