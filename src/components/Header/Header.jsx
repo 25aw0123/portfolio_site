@@ -39,7 +39,7 @@ const Header = () => {
           <li onClick={toggleMenu}>
             <Link to="/about">
               <span className={styles.jaText}>お問い合わせ</span>
-              <span className={styles.enText}>contect</span>
+              <span className={styles.enText}>contact</span>
             </Link>
           </li>
         </ul>

@@ -101,7 +101,12 @@
     font-weight: 400;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+    .header{
+        position: absolute;
+        z-index: 1000;
+    }
+
     .hamburgerButton {
         display: none;
     }
