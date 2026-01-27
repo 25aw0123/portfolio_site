@@ -1,8 +1,209 @@
-.about{
-    padding: 20px;
+.about {
+    padding: 60px 20px;
+    overflow: hidden;
 }
 
-.photo img{
-    width: 200px;
+.titleArea {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
+.titleArea h2 {
+    margin: 0px;
+}
+
+h2.jpText {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 900;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 0.1em;
+    font-family: "Noto Sans JP";
+    position: relative;
+    border-bottom: #6AB7DE solid 2px
+}
+
+h2.jpText:before {
+    content: "";
+    position: absolute;
+    background: #e9f7fb;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 40%;
+    left: -25px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.jpText::first-letter {
+    color: #6AB7DE;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+.enText {
+    color: #6AB7DE;
+    font-family: "Noto Sans JP";
+    font-size: clamp(20px, 3vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: baseline;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.photo {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.imageFrame {
+    position: relative;
+    width: 50%;
+    max-width: 200px;
+    display: inline-block;
+}
+
+.imageFrame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    box-shadow: 15px 15px 0 #c6e7f1;
+}
+
+.imageFrame::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    border-image-source: repeating-linear-gradient(45deg, #fff, #fff 2px, rgba(0 0 0 / 0) 0, rgba(0 0 0 / 0) 6px);
+    border-image-slice: 20;
+    border-image-repeat: round;
+    border-style: solid;
+    border-width: 15px;
+}
+
+.profileInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 900;
+    margin-bottom: 2px;
+    letter-spacing: 0.1em;
+}
+
+.reading {
+    color: #6AB7DE;
+    font-family: "Noto Sans JP";
+    font-size: clamp(12px, 3vw, 18px);
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.description {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 185.714%;
+    letter-spacing: 1.4px;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.linkButton {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #6AB7DE;
+    font-weight: 700;
+    font-size: clamp(16px, 3vw, 20px);
+    align-self: flex-end;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #6AB7DE;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.linkButton:hover{
+    opacity: 80%;
+}
+
+.linkButton:hover .arrow {
+    background-color: #6AB7DE;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+@media (min-width: 768px) {
+    .about {
+        padding: 100px 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .contentWrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .imageFrame {
+        position: relative;
+        width: 70%;
+        max-width: 800px;
+        display: inline-block;
+    }
+
+    .photo {
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    .profileInfo {
+        max-width: 480px;
+    }
+
+    .titleArea {
+        margin-bottom: 60px;
+        justify-content: flex-start;
+    }
+
+}
