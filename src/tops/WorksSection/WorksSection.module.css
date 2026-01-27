@@ -1,0 +1,83 @@
+.works {
+    padding: 60px 20px;
+    background-color: aliceblue;
+}
+
+.titleArea {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.titleArea h2 {
+    margin: 0px;
+}
+
+.jpText {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 900;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 0.1em;
+    font-family: "Noto Sans JP";
+    position: relative;
+    border-bottom: #6AB7DE solid 2px;
+    z-index: 1;
+}
+
+.jpText:before {
+    content: "";
+    position: absolute;
+    background: #d5e9f4;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 40%;
+    left: -25px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.jpText::first-letter {
+    color: #6AB7DE;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+.enText {
+    color: #6AB7DE;
+    font-family: "Noto Sans JP";
+    font-size: clamp(20px, 3vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: baseline;
+}
+
+.cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    gap: 40px;
+    width: 100%;
+    justify-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .works{
+        padding: 100px 40px;
+
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .cardWrapper {
+    justify-items: center;
+}
+}

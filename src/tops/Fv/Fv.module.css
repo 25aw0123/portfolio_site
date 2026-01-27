@@ -85,29 +85,6 @@
     }
 }
 
-@media (min-width: 1024px) {
-    .firstView {
-        background-size: contain;
-    }
-
-    .titleArea{
-        max-width: 850px;
-        margin-left: 20%;
-    }
-
-    .headline {
-        width: 250px;
-        height: auto;
-        display: block;
-    }
-
-    .subheading {
-        width: 240px;
-        height: auto;
-        display: block;
-    }
-}
-
 @media (min-width: 768px) {
     .firstView {
         background-size: contain;
@@ -189,5 +166,28 @@
         width: 250px;
         opacity: 0;
         animation: fadeInUp 2.5s ease-out 1s forwards;
+    }
+}
+
+@media (min-width: 1024px) {
+    .firstView {
+        background-size: contain;
+    }
+
+    .titleArea{
+        max-width: 850px;
+        margin-left: 20%;
+    }
+
+    .headline {
+        width: 250px;
+        height: auto;
+        display: block;
+    }
+
+    .subheading {
+        width: 240px;
+        height: auto;
+        display: block;
     }
 }
