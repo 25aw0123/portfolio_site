@@ -4,7 +4,6 @@ import Layout from './Layout'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import WorkDetailPage from './pages/WorkDetailPage'
-import ScrollToAnchor from './components/ScrollToAnchor'
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
 import ScrollToTop from './components/ScrollToTop'
 
@@ -12,7 +11,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ScrollToAnchor />
       <ScrollToTop />
       <ScrollToTopButton />
       <Routes>
