@@ -81,4 +81,5 @@
 
 .linkButton:hover .card {
     transform: translateX(5px);
+    background: #fafafa;
 }

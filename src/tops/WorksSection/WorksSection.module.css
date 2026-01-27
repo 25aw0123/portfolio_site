@@ -1,6 +1,13 @@
 .works {
-    padding: 60px 20px;
-    background-color: aliceblue;
+    padding: 60px 20px 200px;
+    background-color: rgb(246, 251, 255);
+    position: relative;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    z-index: 1;
 }
 
 .titleArea {
@@ -15,7 +22,7 @@
     margin: 0px;
 }
 
-.jpText {
+h2.jpText {
     font-size: clamp(20px, 3vw, 28px);
     font-weight: 900;
     align-items: center;
@@ -24,24 +31,25 @@
     font-family: "Noto Sans JP";
     position: relative;
     border-bottom: #6AB7DE solid 2px;
-    z-index: 1;
+    position: relative;
+    z-index: 0;
 }
 
-.jpText:before {
+h2.jpText:before {
     content: "";
     position: absolute;
     background: #d5e9f4;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    top: 40%;
-    left: -25px;
+    top: 53%;
+    left: -20px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1;
 }
 
-.jpText::first-letter {
+h2.jpText::first-letter {
     color: #6AB7DE;
     font-size: clamp(28px, 3vw, 36px);
     font-weight: 900;
@@ -68,12 +76,14 @@
 
 @media (min-width: 768px) {
     .works {
-        padding: 100px 40px;
+        padding: 100px 40px 300px;
     }
 
     .container {
         max-width: 1000px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
     }
 
     .cardWrapper {

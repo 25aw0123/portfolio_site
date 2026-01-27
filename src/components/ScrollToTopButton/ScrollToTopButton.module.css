@@ -1,13 +1,15 @@
+
+
 .scrollBtn svg {
   height: 24px; 
   width: auto; 
   position: fixed;
   bottom: 40px;
-  right: 40px;
+  right: -6px;
   z-index: 1000;
   
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: auto;
   
   cursor: pointer;
   display: flex;
@@ -18,12 +20,15 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.scrollBtn:hover svg {
-  transform: translateY(-5px);
-  opacity: 60%;
+.scrollBtn:hover svg{
+  transform: translateX(-5px);
+}
+
+.scrollBtn:hover svg path {
+  fill: #60819c;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
