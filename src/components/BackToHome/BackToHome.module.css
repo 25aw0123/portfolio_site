@@ -1,0 +1,48 @@
+.back{
+    padding: 0 20px 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+    border: 1.5px solid #9EDDF1;
+    color: #9EDDF1;
+
+    border-radius: 50px;
+    padding: 10px 40px;
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    background-color: #eaf8fc;
+    border-color: #7ac5dd;
+}
+
+.icon {
+    width: clamp(16px, 3vw, 20px);
+    height: clamp(16px, 3vw, 20px);
+    margin-right: 8px;
+    stroke: currentColor;
+    stroke-width: 3;
+    fill: none;
+}
+
+.text {
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+    .back{
+    padding: 0 20px 250px;
+}
+}

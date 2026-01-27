@@ -2,6 +2,7 @@ import styles from './AboutSection.module.css';
 import { Link } from 'react-router-dom'
 
 const AboutSection = () => {
+
   return (
     <section id="about" className={styles.about}>
 

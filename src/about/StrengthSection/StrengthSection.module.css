@@ -1,0 +1,69 @@
+.strength {
+    background-color: #F9F9F9;
+    padding: 60px 20px;
+    border-radius: 50px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titleArea {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 40px;
+    gap: 14px;
+}
+
+h2.jpText {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 900;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.1em;
+    font-family: "Noto Sans JP";
+    position: relative;
+    display: inline-block;
+}
+
+.enText {
+    color: #6AB7DE;
+    font-family: "Noto Sans JP";
+    font-size: clamp(20px, 3vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: baseline;
+}
+
+.cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .strength {
+        padding: 80px 20px;
+        background-color: #f9f9f9;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .titleArea {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .cardWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
