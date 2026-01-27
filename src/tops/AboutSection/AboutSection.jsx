@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const AboutSection = () => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
 
       <div className={styles.titleArea}>
         <h2 className={styles.jpText}>

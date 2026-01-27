@@ -31,13 +31,19 @@ const Header = () => {
             </Link>
           </li>
           <li onClick={toggleMenu}>
-            <Link to="/about">
+            <Link to="/#about">
               <span className={styles.jaText}>私のこと</span>
               <span className={styles.enText}>about</span>
             </Link>
           </li>
           <li onClick={toggleMenu}>
-            <Link to="/about">
+            <Link to="/#works">
+              <span className={styles.jaText}>作ったもの</span>
+              <span className={styles.enText}>works</span>
+            </Link>
+          </li>
+          <li onClick={toggleMenu}>
+            <Link to={{ hash: '#contact' }}>
               <span className={styles.jaText}>お問い合わせ</span>
               <span className={styles.enText}>contact</span>
             </Link>

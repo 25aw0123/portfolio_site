@@ -67,9 +67,8 @@
 }
 
 @media (min-width: 768px) {
-    .works{
+    .works {
         padding: 100px 40px;
-
     }
 
     .container {
@@ -78,6 +77,9 @@
     }
 
     .cardWrapper {
-    justify-items: center;
-}
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-items: flex-start;
+    }
 }
