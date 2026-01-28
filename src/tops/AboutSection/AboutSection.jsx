@@ -16,7 +16,7 @@ const AboutSection = () => {
       <div className={styles.contentWrapper}>
         <div className={styles.photo}>
           <div className={styles.imageFrame}>
-          <img src='/images/chang_tzuchien.png' alt='張子謙の写真' width='334' />
+          <img src='./images/chang_tzuchien.png' alt='張子謙の写真' width='334' />
           </div>
         </div>
 

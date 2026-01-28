@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Layout from './Layout'
 import HomePage from './pages/HomePage'
@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop'
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <ScrollToTopButton />
       <Routes>
@@ -20,7 +20,7 @@ function App() {
           <Route path="/work/:id" element={<WorkDetailPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

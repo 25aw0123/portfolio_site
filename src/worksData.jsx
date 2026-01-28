@@ -3,7 +3,7 @@ export const worksData = [
     id: 1,
     category: '学校課題',
     title: 'レシピオウンドメディアの新規制作',
-    thumbnail: '/images/work01_recipe_ownedmedia/work01_thumbnail.png',
+    thumbnail: './images/work01_recipe_ownedmedia/work01_thumbnail.png',
     tags: '学校課題 / 個人制作',
     inCharge: '企画・モックアップ・実装',
     summary: (

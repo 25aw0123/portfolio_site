@@ -5,13 +5,13 @@ const ProfileSection = () => {
     <section className={styles.profile}>
 
         <h2 className={styles.titleImg}>
-          <img src='/images/about/aboutMe.png' width='502' alt='about me' />
+          <img src='./images/about/aboutMe.png' width='502' alt='about me' />
         </h2>
 
       <div className={styles.contentWrapper}>
         <div className={styles.photo}>
           <div className={styles.imageFrame}>
-          <img src='/images/chang_tzuchien.png' alt='張子謙の写真' width='334' />
+          <img src='./images/chang_tzuchien.png' alt='張子謙の写真' width='334' />
           </div>
         </div>
 
