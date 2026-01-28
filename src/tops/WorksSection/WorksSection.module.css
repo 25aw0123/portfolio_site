@@ -66,6 +66,13 @@ h2.jpText::first-letter {
     align-items: baseline;
 }
 
+.update{
+    color: #C57C7C;
+    font-size: clamp(14px, 3vw, 16px);
+    margin-bottom: 40px;
+    margin-top: -25px;
+}
+
 .cardWrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));

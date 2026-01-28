@@ -14,13 +14,16 @@ const WorksSection = () => {
           <span className={styles.enText}>works</span>
         </div>
 
+        <p className={styles.update}>※作品は追加・更新していく予定です。</p>
+
         <div className={styles.cardWrapper}>
           {worksData.map((item) => (
             <WorkCard
               key={item.id}
+              id={item.id}
               category={item.category}
               title={item.title}
-              img={item.img}
+              thumbnail={item.thumbnail}
             />
           ))}
         </div>
