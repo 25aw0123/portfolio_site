@@ -29,7 +29,7 @@
 
 .title {
     margin: 0 0 20px;
-    font-size: clamp(16px, 3vw, 24px);
+    font-size: clamp(18px, 3vw, 24px);
     font-weight: 700;
     letter-spacing: 0.05em;
     background: linear-gradient(transparent 60%, #bce2f5 60%);
@@ -58,7 +58,7 @@
 }
 
 .text {
-    font-size: clamp(14px, 3vw, 18px);
+    font-size: clamp(16px, 3vw, 18px);
     line-height: 1.8;
     color: #344553;
     text-align: left;
